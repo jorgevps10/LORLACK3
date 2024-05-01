@@ -1836,11 +1836,11 @@ echo -e " \e[1;93m[\e[92m1\e[93m] $(msg -verm2 "► ") $(msg -azu "ADMINISTRAR U
 echo -e " \e[1;93m[\e[92m2\e[93m] $(msg -verm2 "► ") $(msg -azu "ADMINISTRAR USUARIOS>>>SS/SSRR")" 
 echo -e " \e[1;93m[\e[92m3\e[93m] $(msg -verm2 "► ") $(msg -azu "ADMINISTRAR USUARIOS>>>V2RAY --> $vra")"
 echo -e " \e[1;93m[\e[92m4\e[93m] $(msg -verm2 "► ") \e[1;38m\e[45mPROTOCOLOS\e[0m  \e[93m<>  \e[1;38m\e[45mHERRAMIENTAS\e[0m"
-echo -e " \e[1;93m[\e[92m2\e[93m] $(msg -verm2 "► ") $(msg -azu "MENU PROTOCOLOS V2")"
-echo -e " \e[1;93m[\e[92m5\e[93m] $(msg -verm2 "► ") $(msg -azu "MONITOR DE PROTOCOLOS ---------> ${monitorserv}")"
-echo -e " \e[1;93m[\e[92m6\e[93m] $(msg -verm2 "► ") $(msg -azu "AUTO INICIAR SCRIPT -----------> $AutoRun ")"
+echo -e " \e[1;93m[\e[92m5\e[93m] $(msg -verm2 "► ") $(msg -azu "MENU PROTOCOLOS V2")"
+echo -e " \e[1;93m[\e[92m6\e[93m] $(msg -verm2 "► ") $(msg -azu "MONITOR DE PROTOCOLOS ---------> ${monitorserv}")"
+echo -e " \e[1;93m[\e[92m7\e[93m] $(msg -verm2 "► ") $(msg -azu "AUTO INICIAR SCRIPT -----------> $AutoRun ")"
 msg -bar
-echo -e " \e[1;93m[\e[92m7\e[93m] \e[97m$(msg -verm2 " ► ") $(msg -verd "ACTUALIZAR") \e[1;93m [\e[92m8\e[93m]\e[97m$(msg -verm2 " ► ")\033[1;31mDESINSTALAR  \e[1;93m[\e[92m0\e[93m]$(msg -verm2 " ► ") $(msg -bra "\e[97m\033[1;41mSALIR")"
+echo -e " \e[1;93m[\e[92m8\e[93m] \e[97m$(msg -verm2 " ► ") $(msg -verd "ACTUALIZAR") \e[1;93m [\e[92m9\e[93m]\e[97m$(msg -verm2 " ► ")\033[1;31mDESINSTALAR  \e[1;93m[\e[92m0\e[93m]$(msg -verm2 " ► ") $(msg -bra "\e[97m\033[1;41mSALIR")"
 msg -bar
 
 selection=$(selection_fun 13)
@@ -1849,13 +1849,14 @@ case ${selection} in
 2)${SCPinst}/C-SSR.sh ;;
 3)${SCPinst}/v2ray.sh ;;
 4)menu3;;
-5) monservi_fun ;; #/etc/VPS-MX/tmp/monitor;;
-6)fun_autorun;;
-7) rm -rf install.sh; apt update; apt upgrade -y; wget https://raw.githubusercontent.com/jorgevps10/LORLACK/main/install.sh; chmod 777 install.sh; ./install.sh --start;;
-8)remove_script
+5)bash <(curl -sL https://raw.githubusercontent.com/jorgevps10/RECURSOSLORLACK3/main/menuprotocolosv2) ;;
+6) monservi_fun ;; #/etc/VPS-MX/tmp/monitor;;
+7)fun_autorun;;
+8) rm -rf install.sh; apt update; apt upgrade -y; wget https://raw.githubusercontent.com/jorgevps10/LORLACK/main/install.sh; chmod 777 install.sh; ./install.sh --start;;
+9)remove_script
 clear;;
 0)cd $HOME && exit 0
 clear;;
 esac
-msg -ne "Enter Para Continuar" && read enter && read clear
+msg -ne "Enter Para Continuar" && read enter
 ${SCPdir}/menu
