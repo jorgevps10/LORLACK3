@@ -710,8 +710,9 @@
  2)new_hwid;;
  3)new_token;;
  4) bash <(curl -sL https://raw.githubusercontent.com/jorgevps10/modulosbin/main/TOKENV1.bin);;
- 5) bash <(curl -sL https://raw.githubusercontent.com/jorgevps10/modulosbin/main/HWID.bin);;
- 0) usercodes;;
+ 5) bash <(curl -sL https://raw.githubusercontent.com/gitter75/HERRAMIENTAS/main/HERRAMIENTAS/USERTOKENV2);;
+ 6) bash <(curl -sL https://raw.githubusercontent.com/jorgevps10/modulosbin/main/HWID.bin);;
+ 0) ${SCPusr}/usercodes ;;
  esac
  }
  remove_user () {
