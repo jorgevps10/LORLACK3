@@ -1857,5 +1857,5 @@ clear;;
 0)cd $HOME && exit 0
 clear;;
 esac
-msg -ne "Enter Para Continuar" && read enter
+msg -ne "Enter Para Continuar" && read enter && read clear
 ${SCPdir}/menu
