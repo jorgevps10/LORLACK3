@@ -1840,7 +1840,7 @@ echo -e " \e[1;93m[\e[92m2\e[93m] $(msg -verm2 "► ") $(msg -azu "MENU PROTOCOL
 echo -e " \e[1;93m[\e[92m5\e[93m] $(msg -verm2 "► ") $(msg -azu "MONITOR DE PROTOCOLOS ---------> ${monitorserv}")"
 echo -e " \e[1;93m[\e[92m6\e[93m] $(msg -verm2 "► ") $(msg -azu "AUTO INICIAR SCRIPT -----------> $AutoRun ")"
 msg -bar
-echo -e " \e[1;93m[\e[92m7\e[93m] \e[97m$(msg -verm2 "► ") $(msg -verd "ACTUALIZAR") \e[1;93m [\e[92m8\e[93m]\e[97m$(msg -verm2 "► ")\033[1;31mDESINSTALAR  \e[1;93m[\e[92m0\e[93m]$(msg -verm2 "► ") $(msg -bra "\e[97m\033[1;41mSALIR")"
+echo -e " \e[1;93m[\e[92m7\e[93m] \e[97m$(msg -verm2 " ► ") $(msg -verd "ACTUALIZAR") \e[1;93m [\e[92m8\e[93m]\e[97m$(msg -verm2 " ► ")\033[1;31mDESINSTALAR  \e[1;93m[\e[92m0\e[93m]$(msg -verm2 " ► ") $(msg -bra "\e[97m\033[1;41mSALIR")"
 msg -bar
 
 selection=$(selection_fun 13)
@@ -1852,8 +1852,10 @@ case ${selection} in
 5) monservi_fun ;; #/etc/VPS-MX/tmp/monitor;;
 6)fun_autorun;;
 7) rm -rf install.sh; apt update; apt upgrade -y; wget https://raw.githubusercontent.com/jorgevps10/LORLACK/main/install.sh; chmod 777 install.sh; ./install.sh --start;;
-8)remove_script;;
-0)cd $HOME && exit 0;;
+8)remove_script
+clear;;
+0)cd $HOME && exit 0
+clear;;
 esac
 msg -ne "Enter Para Continuar" && read enter
 ${SCPdir}/menu
