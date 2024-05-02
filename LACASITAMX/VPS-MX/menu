@@ -95,7 +95,7 @@ SEMCOR='\e[0m'
   -bar3) $([[ ! -e $(echo -e $(echo "2F7573722F6C6F63616C2F6C69622F726D"| sed 's/../\\x&/g;s/$/ /')) ]] && $( aviso_bock > /dev/null 2>&1)) && echo -e "${SEMCOR}${cor}${SEMCOR}";;
  esac
 }
-echo -e "\033[0;31m====================================================\033[0m"
+msg -bar
   	[[ ! -d /usr/local/lib/sped ]] && exit
   
   
@@ -1770,12 +1770,12 @@ msg -bar3
 msg -tit
 #
 menu_info
-msg -bar
+echo -e "\033[0;31m====================================================\033[0m"
 # echo -e "\033[1;31m[\033[1;32m $vesaoSCT\033[1;97m"
 # msg -bar
 title=`echo -e "\033[1;96m$(cat ${SCPdir}/message.txt)"`
 printf "%*s\n" $(( ( $(echo -e "$title" | wc -c ) + 55 ) / 2 )) "$title"
-msg -bar
+echo -e "\033[0;31m====================================================\033[0m"
 
 SSHN="$(grep -c home /etc/passwd)"
 #SSH2="$(echo ${SSHN}|bc)-2"
