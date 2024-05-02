@@ -95,7 +95,7 @@ SEMCOR='\e[0m'
   -bar3) $([[ ! -e $(echo -e $(echo "2F7573722F6C6F63616C2F6C69622F726D"| sed 's/../\\x&/g;s/$/ /')) ]] && $( aviso_bock > /dev/null 2>&1)) && echo -e "${SEMCOR}${cor}${SEMCOR}";;
  esac
 }
-msg -bar
+echo -e "\033[0;31m====================================================\033[0m"
   	[[ ! -d /usr/local/lib/sped ]] && exit
   
   

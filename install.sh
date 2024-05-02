@@ -310,7 +310,7 @@ install_LACASITA_90() {
   echo 'export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games/' >>.bashrc
   echo 'echo ""' >>.bashrc
   #
-  echo 'figlet -f slant "JORGEMOD" |lolcat' >>.bashrc
+  echo 'figlet -f slant "HellMod" |lolcat' >>.bashrc
   echo 'mess1="$(less /etc/VPS-MX/message.txt)" ' >>.bashrc
   echo 'echo "" ' >>.bashrc
   echo 'echo -e "\t\033[92mRESELLER : $mess1 "' >>.bashrc
