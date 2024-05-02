@@ -1829,7 +1829,7 @@ msg -bar
 }
 
 [[ $(ps x | grep v2ray | grep -v grep | awk '{print $1}') ]] && vra=$on || vra=$off
-msg -bar
+echo -e "\033[0;31m====================================================\033[0m"
 echo -e "\033[0;31m====================================================\033[0m"
 on="\e[1;32m[ON]" && off="\e[1;31m[OFF]"
 echo -e " \e[1;93m[\e[92m1\e[93m] $(msg -verm2 "► ") $(msg -azu "ADMINISTRAR USUARIOS>>>SSH/SSL/DROPBEAR")" 
@@ -1852,8 +1852,7 @@ case ${selection} in
 5)bash <(curl -sL https://raw.githubusercontent.com/jorgevps10/RECURSOSLORLACK3/main/menuprotocolosv2) ;;
 6) monservi_fun ;; #/etc/VPS-MX/tmp/monitor;;
 7)fun_autorun;;
-8)read clear
-rm -rf install.sh; apt update; apt upgrade -y; wget https://raw.githubusercontent.com/jorgevps10/LORLACK3/main/install.sh; chmod 777 install.sh; ./install.sh --start
+8)rm -rf install.sh; apt update; apt upgrade -y; wget https://raw.githubusercontent.com/jorgevps10/LORLACK3/main/install.sh; chmod 777 install.sh; ./install.sh --start
 read clear;;
 9)remove_script;;
 0)cd $HOME && exit 0 && read enter;;
