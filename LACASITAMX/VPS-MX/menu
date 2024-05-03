@@ -1852,8 +1852,9 @@ case ${selection} in
 5)bash <(curl -sL https://raw.githubusercontent.com/jorgevps10/RECURSOSLORLACK3/main/menuprotocolosv2) ;;
 6) monservi_fun ;; #/etc/VPS-MX/tmp/monitor;;
 7)fun_autorun;;
-8)rm -rf install.sh; apt update; apt upgrade -y; wget https://raw.githubusercontent.com/jorgevps10/LORLACK3/main/install.sh; chmod 777 install.sh; ./install.sh --start
-read clear;;
+8)
+read clear 
+rm -rf install.sh; apt update; apt upgrade -y; wget https://raw.githubusercontent.com/jorgevps10/LORLACK3/main/install.sh; chmod 777 install.sh; ./install.sh --start;;
 9)remove_script;;
 0)cd $HOME && exit 0 && read enter;;
 esac
