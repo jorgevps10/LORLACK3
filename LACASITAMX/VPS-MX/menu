@@ -914,7 +914,7 @@ echo -ne "$(msg -verd " [0]") $(msg -verm2 ">") " && msg -bra "\033[1;41m${a_bac
 msg -bar
 echo -ne " ►\e[1;37m Selecione Una Opcion: \e[33m " && read select
 case $select in
-0) exit ;;
+0) return ;;
 1) ${SCPinst}/budp.sh && msg -ne "Enter Para Continuar" && read enter
 menu3 ;;
 2) ${SCPinst}/shadowsocks.sh && msg -ne "Enter Para Continuar" && read enter
