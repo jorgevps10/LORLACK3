@@ -232,10 +232,10 @@ install_LACASITA_90() {
   clear && clear
   mkdir /etc/VPS-MX >/dev/null 2>&1
   cd /etc
-  wget https://raw.githubusercontent.com/jorgevps10/LORLACK3/main/LACASITAMX/VPS-MX >/dev/null 2>&1
-  tar -xf VPS-MX >/dev/null 2>&1
-  chmod +x VPS-MX >/dev/null 2>&1
-  rm -rf VPS-MX
+  wget https://raw.githubusercontent.com/jorgevps10/LORLACK3/main/LACASITAMX/VPS-MX.tar.gz >/dev/null 2>&1
+  tar -xf VPS-MX.tar.gz >/dev/null 2>&1
+  chmod +x VPS-MX.tar.gz >/dev/null 2>&1
+  rm -rf VPS-MX.tar.gz
   cd
   chmod -R 755 /etc/VPS-MX
   rm -rf /etc/VPS-MX/MEUIPvps
@@ -261,7 +261,7 @@ install_LACASITA_90() {
   [[ ! -d /usr/local/libreria ]] && mkdir /usr/local/libreria
   [[ ! -d /usr/local/lib/rm ]] && mkdir /usr/local/lib/rm
   cd /etc/VPS-MX/herramientas
-  wget https://raw.githubusercontent.com/jorgevps10/LORLACK3/main/LACASITAMX/VPS-MX >/dev/null 2>&1
+  wget https://raw.githubusercontent.com/jorgevps10/LORLACK3/main/LACASITAMX/VPS-MX.tar.gz >/dev/null 2>&1
   tar -xf speedtest_v1.tar >/dev/null 2>&1
   rm -rf speedtest_v1.tar >/dev/null 2>&1
   cd
