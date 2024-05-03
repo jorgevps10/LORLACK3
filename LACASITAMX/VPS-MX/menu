@@ -871,7 +871,7 @@ pidproxy=$(ps x | grep -w  "lacasitamx.py" | grep -v "grep" | awk -F "pts" '{pri
 Bot=$(ps x|grep -v grep |grep "ADMbot.sh")
 [[ ! $Bot ]] && AD="\033[1;31m[OFF]" || AD="\033[1;32m[ON] "
 #[[ $(ps x | grep stunnel5 | grep -v grep | awk '{print $1}') ]] && stunel5="\e[1;32m[ON]" || stunel5="\e[1;31m[OFF]"
-#msg -bar
+msg -bar
 #msg -tit
 export -f fun_eth
 export -f fun_bar
