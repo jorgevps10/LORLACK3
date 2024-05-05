@@ -701,7 +701,10 @@
  menu_crearuser(){
  clear
  #msg -bar
- msg -tit
+ #msg -tit
+ msg -bar
+ msg -verd "  >>>>>   MODOS DE CREACION DE USUARIOS   <<<<<"
+ msg -bar
  msg -ama " \e[1;33m[1] > \e[37mCREAR CUENTA NORMAL \e[0m \n \e[1;33m[2] > \e[37mCREAR CUENTA HWID \e[0m\n \e[1;33m[3] > \e[37mCREAR CUENTA TOKEN \e[0m\n \e[1;33m[4] > \e[37mCREAR CUENTA TOKEN CON PASS \e[0m\n \e[1;33m[5] > \e[37mCREAR CUENTA TOKEN BY RUFFU \e[0m\n \e[1;33m[6] > \e[37mCREAR CUENTA HWID V2 \e[0m\n \e[1;31m[0] \e[1;37m<- VOLVER"
  msg -bar
  read -p " $(echo -e "\e[1;37mSeleccione Una Opcion [1/5]:\e[1;33m") " cuen
@@ -904,7 +907,10 @@
  menudel(){
  clear
  #msg -bar
- msg -tit
+ #msg -tit
+ msg -bar
+ msg -verd "  >>>>>   MODOS DE ELIMINACION DE USUARIOS   <<<<<"
+ msg -bar
  msg -ama " \e[1;33m[1] \e[1;31mREMOVER CUENTAS SSH  \n \e[1;33m[2] \e[1;31mREMOVER CUENTAS HWID\n \e[1;33m[3] \e[1;31mREMOVER CUENTAS TOKEN\n \e[1;33m[4] \e[1;37mREMOVER CUENTAS SSH,HWID,TOKEN\n \e[1;31m[0] \e[1;37m<- VOLVER"
  msg -bar
  read -p " $(echo -e "\e[1;37mSeleccione Una Opcion [1/3]:\e[1;33m") " cuen
@@ -938,6 +944,10 @@
  msg -bar
  fi
  msg -ama "$(fun_trans "Escriba o seleccione un Usuario")"
+ msg -ama "$(fun_trans "[00] ► VOLVER")"
+ case $cuen in
+ 00) ${SCPusr}/usercodes ;;
+ esac
  msg -bar
  unset selection
  while [[ -z ${selection} ]]; do
