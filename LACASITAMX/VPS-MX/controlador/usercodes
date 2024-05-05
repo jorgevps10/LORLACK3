@@ -1797,7 +1797,6 @@
  [[ -z ${VERY2} ]] && desbloqueo="\033[1;31m[DESACTIVADO]" || desbloqueo="\033[1;32m[ACTIVO]"
  #msg -bar
  #msg -tit
- echo -e "\e[97m \033[1;41m=====>> ►►  HELLBOYVPS MOD  ◄◄ <<=====\033[1;49m\033[1;49m \033[1;32m>\033[1;32m$vesaoSCT " && echo -e "${SEMCOR}${cor}${SEMCOR}"
  msg -bar
  msg -verd "  >>>>>   MENU ADMINISTRACION DE USUARIOS   <<<<<"
  msg -bar
