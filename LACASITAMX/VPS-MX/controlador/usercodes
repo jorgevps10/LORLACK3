@@ -1795,7 +1795,7 @@
  exit
  fi
  [[ -z ${VERY2} ]] && desbloqueo="\033[1;31m[DESACTIVADO]" || desbloqueo="\033[1;32m[ACTIVO]"
- #msg -bar
+ msg -bar
  msg -tit
  msg -verd "  >>>>>   MENU ADMINISTRACION DE USUARIOS   <<<<<"
  msg -bar
