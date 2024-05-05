@@ -935,6 +935,10 @@
  else
  msg -tit
  msg -ama "$(fun_trans " EDITAR USUARIO | Usuarios Activos en el Servidor")"
+ msg -verd "[00] ► "VOLVER")"
+ case $cuen in
+ 00) ${SCPusr}/usercodes ;;
+ esac
  msg -bar
  i=0
  for us in $(echo ${usuarios_ativos[@]}); do
@@ -944,10 +948,6 @@
  msg -bar
  fi
  msg -ama "$(fun_trans "Escriba o seleccione un Usuario")"
- msg -verd "[00] ► "VOLVER")"
- case $cuen in
- 00) ${SCPusr}/usercodes ;;
- esac
  msg -bar
  unset selection
  while [[ -z ${selection} ]]; do
