@@ -1797,6 +1797,7 @@
  [[ -z ${VERY2} ]] && desbloqueo="\033[1;31m[DESACTIVADO]" || desbloqueo="\033[1;32m[ACTIVO]"
  #msg -bar
  msg -tit
+ msg -bar
  msg -verd "  >>>>>   MENU ADMINISTRACION DE USUARIOS   <<<<<"
  msg -bar
  #msg -bar3
