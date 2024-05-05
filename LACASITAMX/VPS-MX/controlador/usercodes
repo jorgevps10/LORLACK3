@@ -931,7 +931,8 @@
  msg -tit
  msg -verm "$(fun_trans " EDITAR USUARIO | Ningun usuario registrado")"
  msg -bar
- return 1
+ #return 1
+ ${SCPusr}/usercodes
  else
  msg -tit
  msg -ama "$(fun_trans " EDITAR USUARIO | Usuarios Activos en el Servidor")"
@@ -959,7 +960,8 @@
  [[ -z $useredit ]] && {
  msg -verm "$(fun_trans "Error, Usuario Invalido")"
  msg -bar
- return 1
+ #return 1
+ ${SCPusr}/usercodes
  }
  [[ ! $(echo ${usuarios_ativos[@]}|grep -w "$useredit") ]] && {
  msg -verm "$(fun_trans "Error, Usuario Invalido")"
