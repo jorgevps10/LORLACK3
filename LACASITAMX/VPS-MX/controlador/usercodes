@@ -76,7 +76,7 @@
  eliminar_all () {
  clear
  clear
- msg -bar
+ #msg -bar
  msg -tit
  echo -e "\033[1;31m       BORRAR TODOS LOS USUARIOS REGISTRADOS"
  msg -bar
@@ -110,7 +110,7 @@
  reset_contador () {
  clear
  clear
- msg -bar
+ #msg -bar
  msg -tit
  echo -e "\033[1;33m          REINICIAR CONTADOR DE BLOQUEOS"
  msg -bar
@@ -333,7 +333,7 @@
  new_hwid () {
  clear
  clear
- msg -bar
+ #msg -bar
  usuarios_ativo=($(cat ${USRdatabaseh}|cut -d'|' -f1))
  usuarios_ativos=('' $(mostrar_usuario))
  if [[ -z ${usuarios_ativos[@]} ]]; then
