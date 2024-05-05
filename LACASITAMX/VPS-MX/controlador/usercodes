@@ -960,9 +960,8 @@
  [[ -z $useredit ]] && {
  msg -verm "$(fun_trans "Error, Usuario Invalido")"
  msg -bar
- #return 1
- ${SCPusr}/usercodes
- else
+ return ${SCPusr}/usercodes
+
  }
  [[ ! $(echo ${usuarios_ativos[@]}|grep -w "$useredit") ]] && {
  msg -verm "$(fun_trans "Error, Usuario Invalido")"
