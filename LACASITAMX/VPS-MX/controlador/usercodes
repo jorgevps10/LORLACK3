@@ -944,7 +944,7 @@
  msg -bar
  fi
  msg -ama "$(fun_trans "Escriba o seleccione un Usuario")"
- msg -ama "$(fun_trans "[00] ► VOLVER")"
+ msg -verd "[00] ► "VOLVER")"
  case $cuen in
  00) ${SCPusr}/usercodes ;;
  esac
