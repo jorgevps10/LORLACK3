@@ -907,8 +907,8 @@
  menudel(){
  clear
  #msg -bar
- #msg -tit
- msg -bar
+ msg -tit
+ #msg -bar
  msg -verd "  >>>>>   MODOS DE ELIMINACION DE USUARIOS   <<<<<"
  msg -bar
  msg -ama " \e[1;33m[1] \e[1;31mREMOVER CUENTAS SSH  \n \e[1;33m[2] \e[1;31mREMOVER CUENTAS HWID\n \e[1;33m[3] \e[1;31mREMOVER CUENTAS TOKEN\n \e[1;33m[4] \e[1;37mREMOVER CUENTAS SSH,HWID,TOKEN\n \e[1;31m[0] \e[1;37m<- VOLVER"
@@ -919,7 +919,7 @@
  2)remove_hwid;;
  3)remove_token;;
  4)remove_allus;;
- 0) ;;
+ 0)${SCPusr}/usercodes ;;
  esac
  }
  renew_user () {
@@ -935,10 +935,6 @@
  else
  msg -tit
  msg -ama "$(fun_trans " EDITAR USUARIO | Usuarios Activos en el Servidor")"
- msg -verd "[00] ► "VOLVER")"
- case $cuen in
- 00) ${SCPusr}/usercodes ;;
- esac
  msg -bar
  i=0
  for us in $(echo ${usuarios_ativos[@]}); do
