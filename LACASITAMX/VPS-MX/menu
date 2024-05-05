@@ -103,7 +103,7 @@ SEMCOR='\e[0m'
   #-bar3) $([[ ! -e $(echo -e $(echo "2F7573722F6C6F63616C2F6C69622F726D"| sed 's/../\\x&/g;s/$/ /')) ]] && $( aviso_bock > /dev/null 2>&1)) && echo -e "${SEMCOR}${cor}${SEMCOR}";;
  #esac
  "-bar2"|"-bar")cor="\e[1;31m====================================================" && echo -e "${SEMCOR}${cor}${SEMCOR}";;
-  -tit)echo -e "\e[91m====================================================\e[0m\n \e[2;97m\e[3;93m ❯❯❯❯ HELLBOYVPS MOD ❮❮❮❮  \033[0m \033[1;31m[\033[1;32m$vesaoSCT " && echo -e "${SEMCOR}${cor}${SEMCOR}";;
+  -tit)echo -e "\e[91m====================================================\e[0m\n \e[2;97m\e[3;93m=====>> ►►  HELLBOYVPS MOD  ◄◄ <<=====\033[0m \033[1;31m[\033[1;32m$vesaoSCT " && echo -e "${SEMCOR}${cor}${SEMCOR}";;
   -bar3) $([[ ! -e $(echo -e $(echo "2F7573722F6C6F63616C2F6C69622F726D"| sed 's/../\\x&/g;s/$/ /')) ]] && $( aviso_bock > /dev/null 2>&1)) && echo -e "${SEMCOR}${cor}${SEMCOR}";;
  esac
 }
@@ -457,6 +457,11 @@ mb=$(printf '%-8s' "$(free -h | grep Mem | sed 's/\s\+/,/g' | cut -d , -f6)")
 _hora=$(printf '%(%H:%M:%S)T')
 _hoje=$(date +'%d/%m/%Y')
 
+#echo -e "\033[1;31m OS \033[1;31m: \033[1;32m$_system   \033[1;31mHORA\033[1;31m: \033[1;32m$_hora   \033[1;31mIP\033[1;31m:\033[1;32m $(meu_ip)"
+#echo -e "\033[1;31m RAM\e[31m: \033[1;32m$_ram   \033[1;31mUSADO\033[1;32m: \033[1;32m$mb \033[1;31m LIBRE\033[1;31m: \033[1;32m$_ram2"
+#echo -e "\033[1;31m CPU\e[31m: \033[1;32m $_core   \033[1;31mUSADO\033[1;32m: \033[1;32m$_usop \033[1;31m     ARQ\033[1;31m: \033[1;32m$modelo1"
+echo -e "\033[1;35m SISTEMA                             \033[1;35mMEMORIA RAM                      \033[1;35mPROCESADOR"
+echo -e "\033[0;31m————————————————————————————————————————————————————\033[0m"
 echo -e "\033[1;31m OS \033[1;31m: \033[1;32m$_system   \033[1;31mHORA\033[1;31m: \033[1;32m$_hora   \033[1;31mIP\033[1;31m:\033[1;32m $(meu_ip)"
 echo -e "\033[1;31m RAM\e[31m: \033[1;32m$_ram   \033[1;31mUSADO\033[1;32m: \033[1;32m$mb \033[1;31m LIBRE\033[1;31m: \033[1;32m$_ram2"
 echo -e "\033[1;31m CPU\e[31m: \033[1;32m $_core   \033[1;31mUSADO\033[1;32m: \033[1;32m$_usop \033[1;31m     ARQ\033[1;31m: \033[1;32m$modelo1"

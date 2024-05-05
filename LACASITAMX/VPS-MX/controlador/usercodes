@@ -960,7 +960,7 @@
  [[ -z $useredit ]] && {
  msg -verm "$(fun_trans "Error, Usuario Invalido")"
  msg -bar
- return usercodes
+ return 1
 
  }
  [[ ! $(echo ${usuarios_ativos[@]}|grep -w "$useredit") ]] && {
